@@ -24,11 +24,11 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
   }, [score]);
 
   // Semicircle parameters
-  const size = 300;
-  const strokeWidth = 14;
+  const size = 220;
+  const strokeWidth = 11;
   const radius = (size - strokeWidth * 2) / 2;
   const cx = size / 2;
-  const cy = size / 2 + 10;
+  const cy = size / 2 + 6;
 
   // Perimeter of semicircle = Math.PI * radius
   const arcLength = Math.PI * radius;
@@ -45,16 +45,16 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
     <div
       style={{
         background: 'var(--bg-dark-card)',
-        borderRadius: 24,
-        padding: '28px 30px',
+        borderRadius: 20,
+        padding: '18px 20px',
         color: '#ffffff',
         border: '1px solid rgba(255, 255, 255, 0.08)',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        boxShadow: '0 12px 30px rgba(0, 0, 0, 0.3)',
-        minHeight: '440px',
+        boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)',
+        minHeight: '330px',
         overflow: 'hidden',
       }}
     >
@@ -65,8 +65,8 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
           top: '20%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: 220,
-          height: 120,
+          width: 170,
+          height: 90,
           background: 'radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 70%)',
           pointerEvents: 'none',
         }}
@@ -74,19 +74,19 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
 
       {/* Card Header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', zIndex: 2 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ fontSize: 15, fontWeight: 600, color: '#f3f4f6' }}>System Performance & SLA Score</span>
-          <Info size={14} style={{ color: '#9ca3af', opacity: 0.8, cursor: 'pointer' }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+          <span style={{ fontSize: 13.5, fontWeight: 600, color: '#f3f4f6' }}>System Performance & SLA Score</span>
+          <Info size={13} style={{ color: '#9ca3af', opacity: 0.8, cursor: 'pointer' }} />
         </div>
         <button
           onClick={() => interactive && setCurrentScore(currentScore === 86 ? 94 : 86)}
           title="Simulate score update"
           style={{
-            fontSize: 11,
+            fontSize: 10.5,
             color: '#9ca3af',
             background: 'rgba(255, 255, 255, 0.08)',
-            padding: '3px 8px',
-            borderRadius: 12,
+            padding: '2px 7px',
+            borderRadius: 10,
             transition: 'all 0.2s ease',
           }}
         >
@@ -95,11 +95,11 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
       </div>
 
       {/* Speedometer Arc Illustration */}
-      <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center', marginTop: 10, zIndex: 2 }}>
+      <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center', marginTop: 4, zIndex: 2 }}>
         <svg
           width={size}
-          height={size / 2 + 55}
-          viewBox={`0 0 ${size} ${size / 2 + 55}`}
+          height={size / 2 + 40}
+          viewBox={`0 0 ${size} ${size / 2 + 40}`}
           style={{ overflow: 'visible' }}
         >
           <defs>
@@ -116,8 +116,8 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
           {/* Outer Tick Marks */}
           {Array.from({ length: 33 }).map((_, i) => {
             const tickAngle = Math.PI - (i / 32) * Math.PI;
-            const rInner = radius + 14;
-            const rOuter = radius + (i % 4 === 0 ? 22 : 18);
+            const rInner = radius + 9;
+            const rOuter = radius + (i % 4 === 0 ? 15 : 12);
             const x1 = cx + rInner * Math.cos(tickAngle);
             const y1 = cy - rInner * Math.sin(tickAngle);
             const x2 = cx + rOuter * Math.cos(tickAngle);
@@ -131,7 +131,7 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
                 x2={x2}
                 y2={y2}
                 stroke={isPassed ? '#ffffff' : '#374151'}
-                strokeWidth={i % 4 === 0 ? 2 : 1}
+                strokeWidth={i % 4 === 0 ? 1.5 : 1}
                 strokeLinecap="round"
                 opacity={isPassed ? 0.95 : 0.35}
                 style={{ transition: 'stroke 0.3s ease, opacity 0.3s ease' }}
@@ -170,13 +170,13 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
             <circle
               cx={knobX}
               cy={knobY}
-              r={13}
+              r={9.5}
               fill="#111113"
               stroke="#ffffff"
-              strokeWidth={3.5}
+              strokeWidth={2.5}
               filter="url(#knobGlow)"
             />
-            <circle cx={knobX} cy={knobY} r={4.5} fill="#ffffff" />
+            <circle cx={knobX} cy={knobY} r={3.5} fill="#ffffff" />
           </motion.g>
         </svg>
 
@@ -184,14 +184,14 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
         <div
           style={{
             position: 'absolute',
-            bottom: 6,
+            bottom: 4,
             left: '50%',
             transform: 'translateX(-50%)',
             textAlign: 'center',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
-            <span style={{ fontSize: 48, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
+            <span style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>
               <AnimatedNumber value={currentScore} duration={1200} />
             </span>
             <span
@@ -199,37 +199,37 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 2,
-                fontSize: 12,
+                fontSize: 11,
                 fontWeight: 600,
                 color: '#34d399',
                 background: 'rgba(52, 211, 153, 0.15)',
-                padding: '3px 7px',
-                borderRadius: 12,
+                padding: '2px 6px',
+                borderRadius: 10,
               }}
             >
               ↑ {delta}
             </span>
           </div>
-          <div style={{ fontSize: 13, color: '#9ca3af', marginTop: 4, fontWeight: 500 }}>
+          <div style={{ fontSize: 11.5, color: '#9ca3af', marginTop: 3, fontWeight: 500 }}>
             of 100 points
           </div>
         </div>
       </div>
 
       {/* Bottom Insights */}
-      <div style={{ marginTop: 14, zIndex: 2 }}>
-        <div style={{ fontSize: 16, fontWeight: 600, color: '#ffffff', marginBottom: 4 }}>
+      <div style={{ marginTop: 10, zIndex: 2 }}>
+        <div style={{ fontSize: 14, fontWeight: 600, color: '#ffffff', marginBottom: 3 }}>
           Ahead of plan
         </div>
-        <p style={{ fontSize: 13.5, color: '#9ca3af', lineHeight: 1.45, marginBottom: 12 }}>
+        <p style={{ fontSize: 12, color: '#9ca3af', lineHeight: 1.4, marginBottom: 8 }}>
           Both SaaS and Trading engine tiers beat SLA targets. Cloud SaaS did most of the lifting.
         </p>
         <button
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: 4,
-            fontSize: 13,
+            gap: 3,
+            fontSize: 12,
             color: '#e5e7eb',
             fontWeight: 500,
             textDecoration: 'underline',
@@ -240,7 +240,7 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
           onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
           onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.9')}
         >
-          Improve your score <ArrowUpRight size={14} />
+          Improve your score <ArrowUpRight size={13} />
         </button>
       </div>
     </div>

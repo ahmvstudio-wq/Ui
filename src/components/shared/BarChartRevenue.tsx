@@ -32,7 +32,7 @@ export const BarChartRevenue: React.FC = () => {
   const [hoverIndex, setHoverIndex] = useState<number>(9);
 
   const maxVal = 60000;
-  const chartHeight = 240;
+  const chartHeight = 160;
 
   const handleYearChange = (year: '2025' | '2026') => {
     setSelectedYear(year);
@@ -43,20 +43,20 @@ export const BarChartRevenue: React.FC = () => {
     <div
       className="glass-card"
       style={{
-        padding: '26px 30px',
+        padding: '18px 20px',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        minHeight: '440px',
+        minHeight: '330px',
       }}
     >
       {/* Header */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 16, fontWeight: 700, color: 'var(--text-primary)' }}>Enterprise Revenue</span>
-          <Info size={14} style={{ color: 'var(--text-muted)', cursor: 'pointer' }} />
-          <span style={{ fontSize: 14, color: 'var(--text-secondary)', fontWeight: 500 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ fontSize: 14.5, fontWeight: 700, color: 'var(--text-primary)' }}>Enterprise Revenue</span>
+          <Info size={13} style={{ color: 'var(--text-muted)', cursor: 'pointer' }} />
+          <span style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500 }}>
             $300,000 ARR so far this year
           </span>
         </div>
@@ -67,7 +67,7 @@ export const BarChartRevenue: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             background: 'var(--bg-surface-subtle)',
-            padding: 3,
+            padding: 2.5,
             borderRadius: 9999,
             border: '1px solid var(--border-light)',
             position: 'relative',
@@ -81,9 +81,9 @@ export const BarChartRevenue: React.FC = () => {
                 onClick={() => handleYearChange(yr)}
                 style={{
                   position: 'relative',
-                  padding: '4px 14px',
+                  padding: '3px 11px',
                   borderRadius: 9999,
-                  fontSize: 12.5,
+                  fontSize: 11.5,
                   fontWeight: 600,
                   color: isSel ? 'var(--pill-active-text)' : 'var(--text-secondary)',
                   zIndex: 2,
@@ -213,8 +213,8 @@ export const BarChartRevenue: React.FC = () => {
                   animate={{ height: `${h2025}px` }}
                   transition={{ type: 'spring', stiffness: 120, damping: 14, delay: idx * 0.025 }}
                   style={{
-                    width: 14,
-                    borderRadius: '8px 8px 3px 3px',
+                    width: 11,
+                    borderRadius: '6px 6px 2px 2px',
                     border: '1px solid var(--border-medium)',
                     background: selectedYear === '2025' ? 'rgba(0,0,0,0.06)' : 'rgba(0,0,0,0.02)',
                     opacity: selectedYear === '2025' ? 1 : 0.6,
@@ -227,8 +227,8 @@ export const BarChartRevenue: React.FC = () => {
                   animate={{ height: `${h2026}px` }}
                   transition={{ type: 'spring', stiffness: 120, damping: 14, delay: idx * 0.035 }}
                   style={{
-                    width: 15,
-                    borderRadius: '8px 8px 3px 3px',
+                    width: 12,
+                    borderRadius: '6px 6px 2px 2px',
                     background:
                       isHovered
                         ? 'linear-gradient(180deg, #111113 0%, #374151 100%)'
@@ -245,14 +245,14 @@ export const BarChartRevenue: React.FC = () => {
                       layoutId="bar-active-cap"
                       style={{
                         position: 'absolute',
-                        top: 3,
+                        top: 2,
                         left: '50%',
                         transform: 'translateX(-50%)',
-                        width: 7,
-                        height: 7,
+                        width: 5,
+                        height: 5,
                         borderRadius: '50%',
                         background: '#ffffff',
-                        boxShadow: '0 0 6px rgba(255,255,255,0.8)',
+                        boxShadow: '0 0 5px rgba(255,255,255,0.8)',
                       }}
                     />
                   )}
@@ -276,29 +276,29 @@ export const BarChartRevenue: React.FC = () => {
                 top: -8,
                 background: '#111113',
                 color: '#ffffff',
-                borderRadius: 14,
-                padding: '14px 18px',
-                minWidth: 175,
-                boxShadow: '0 14px 35px rgba(0,0,0,0.3)',
+                borderRadius: 12,
+                padding: '10px 14px',
+                minWidth: 155,
+                boxShadow: '0 12px 30px rgba(0,0,0,0.3)',
                 border: '1px solid rgba(255,255,255,0.12)',
                 pointerEvents: 'none',
                 zIndex: 30,
               }}
             >
-              <div style={{ fontSize: 13, fontWeight: 700, color: '#f3f4f6', marginBottom: 8 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: '#f3f4f6', marginBottom: 6 }}>
                 {hoveredMonth.month} {selectedYear}
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12.5, marginBottom: 4 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11.5, marginBottom: 3 }}>
                 <span style={{ color: '#9ca3af' }}>Revenue</span>
                 <span style={{ fontWeight: 600, fontFamily: 'var(--font-mono)' }}>
                   ${(selectedYear === '2026' ? hoveredMonth.val2026 : hoveredMonth.val2025).toLocaleString()}
                 </span>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12.5, marginBottom: 4 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11.5, marginBottom: 3 }}>
                 <span style={{ color: '#9ca3af' }}>Contracts</span>
                 <span style={{ fontWeight: 600, fontFamily: 'var(--font-mono)' }}>{hoveredMonth.orders}</span>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12.5, paddingTop: 4, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11.5, paddingTop: 3, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                 <span style={{ color: '#9ca3af' }}>vs last year</span>
                 <span style={{ fontWeight: 700, color: '#34d399', fontFamily: 'var(--font-mono)' }}>
                   {hoveredMonth.growth}
@@ -314,16 +314,16 @@ export const BarChartRevenue: React.FC = () => {
         style={{
           display: 'flex',
           justifyContent: 'space-between',
-          paddingLeft: 52,
-          paddingRight: 60,
-          marginTop: 14,
+          paddingLeft: 50,
+          paddingRight: 58,
+          marginTop: 8,
         }}
       >
         {MONTHS.map((item, idx) => (
           <span
             key={item.month}
             style={{
-              fontSize: 12,
+              fontSize: 11,
               fontWeight: hoverIndex === idx ? 700 : 500,
               color: hoverIndex === idx ? 'var(--text-primary)' : 'var(--text-muted)',
               cursor: 'pointer',

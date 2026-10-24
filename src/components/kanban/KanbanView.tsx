@@ -193,10 +193,10 @@ export const KanbanView: React.FC<KanbanViewProps> = ({ onOpenAddCardModal }) =>
   return (
     <div className="page-container animate-view-in">
       {/* Top Header & Project Tabs */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 20 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 14 }}>
         <h1
           style={{
-            fontSize: 32,
+            fontSize: 25,
             fontWeight: 800,
             letterSpacing: '-0.03em',
             color: 'var(--text-primary)',
@@ -211,7 +211,7 @@ export const KanbanView: React.FC<KanbanViewProps> = ({ onOpenAddCardModal }) =>
             display: 'flex',
             alignItems: 'center',
             background: 'var(--bg-surface-subtle)',
-            padding: '3px',
+            padding: '2.5px',
             borderRadius: 9999,
             border: '1px solid var(--border-light)',
           }}
@@ -222,23 +222,23 @@ export const KanbanView: React.FC<KanbanViewProps> = ({ onOpenAddCardModal }) =>
               sound.playTab();
             }}
             style={{
-              padding: '6px 14px',
+              padding: '5px 12px',
               borderRadius: 9999,
-              fontSize: 13,
+              fontSize: 12,
               fontWeight: activeBoard === 'spring' ? 600 : 500,
               background: activeBoard === 'spring' ? 'var(--pill-active-bg)' : 'transparent',
               color: activeBoard === 'spring' ? 'var(--pill-active-text)' : 'var(--text-secondary)',
               display: 'flex',
               alignItems: 'center',
-              gap: 6,
+              gap: 5,
               transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
           >
             <span>Core ERP v4.8</span>
             <span
               style={{
-                fontSize: 11,
-                padding: '1px 6px',
+                fontSize: 10.5,
+                padding: '1px 5px',
                 borderRadius: 9999,
                 background: activeBoard === 'spring' ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.06)',
                 color: 'inherit',
@@ -255,23 +255,23 @@ export const KanbanView: React.FC<KanbanViewProps> = ({ onOpenAddCardModal }) =>
               sound.playTab();
             }}
             style={{
-              padding: '6px 14px',
+              padding: '5px 12px',
               borderRadius: 9999,
-              fontSize: 13,
+              fontSize: 12,
               fontWeight: activeBoard === 'retail' ? 600 : 500,
               background: activeBoard === 'retail' ? 'var(--pill-active-bg)' : 'transparent',
               color: activeBoard === 'retail' ? 'var(--pill-active-text)' : 'var(--text-secondary)',
               display: 'flex',
               alignItems: 'center',
-              gap: 6,
+              gap: 5,
               transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
           >
             <span>Trading Engine Upgrade</span>
             <span
               style={{
-                fontSize: 11,
-                padding: '1px 6px',
+                fontSize: 10.5,
+                padding: '1px 5px',
                 borderRadius: 9999,
                 background: activeBoard === 'retail' ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.06)',
                 color: 'inherit',
@@ -288,11 +288,11 @@ export const KanbanView: React.FC<KanbanViewProps> = ({ onOpenAddCardModal }) =>
       <div
         className="glass-card"
         style={{
-          padding: '22px 28px',
-          marginBottom: 24,
+          padding: '16px 20px',
+          marginBottom: 16,
           display: 'flex',
           flexDirection: 'column',
-          gap: 16,
+          gap: 12,
         }}
       >
         {/* Top Info */}

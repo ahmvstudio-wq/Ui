@@ -57,12 +57,12 @@ export const OrdersView: React.FC = () => {
       className="page-container"
     >
       {/* Top Header */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14, marginBottom: 24 }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 16 }}>
-          <h1 style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
+          <h1 style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
             Software Contracts & Deployments
           </h1>
-          <span style={{ fontSize: 14, color: 'var(--text-secondary)', fontWeight: 500 }}>
+          <span style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500 }}>
             {filtered.length} active enterprise accounts • <AnimatedNumber value={totalRevenue} prefix="$" duration={600} decimals={2} /> annual contract value
           </span>
         </div>
@@ -70,17 +70,17 @@ export const OrdersView: React.FC = () => {
         <button
           onClick={() => sound.playSuccess()}
           className="glass-pill"
-          style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '8px 18px', fontSize: 13.5, fontWeight: 600, color: 'var(--text-primary)' }}
+          style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '6px 14px', fontSize: 12.5, fontWeight: 600, color: 'var(--text-primary)' }}
         >
-          <Download size={15} />
+          <Download size={14} />
           <span>Export Contracts</span>
         </button>
       </div>
 
       {/* Filter & Search Controls */}
-      <div className="glass-card" style={{ padding: '16px 20px', marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
+      <div className="glass-card" style={{ padding: '12px 16px', marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         {/* Status Pills */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: 'var(--bg-surface-subtle)', padding: 3, borderRadius: 9999 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 5, background: 'var(--bg-surface-subtle)', padding: 2.5, borderRadius: 9999 }}>
           {(['All', 'Active', 'Deploying', 'Provisioned'] as const).map((st) => {
             const isActive = statusFilter === st;
             return (

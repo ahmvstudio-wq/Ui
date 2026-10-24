@@ -54,9 +54,9 @@ export const Navbar: React.FC<NavbarProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '16px 40px 12px 40px',
-        maxWidth: 1540,
-        margin: '0 auto 28px auto',
+        padding: '8px 32px 4px 32px',
+        maxWidth: 1360,
+        margin: '0 auto 14px auto',
         position: 'sticky',
         top: 0,
         zIndex: 50,
@@ -82,7 +82,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           alt="Tadbeer Transformation Trading"
           className="logo-light-only"
           style={{
-            height: 38,
+            height: 30,
             width: 'auto',
             objectFit: 'contain',
             display: 'block',
@@ -93,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           alt="Tadbeer Transformation Trading"
           className="logo-dark-only"
           style={{
-            height: 38,
+            height: 30,
             width: 'auto',
             objectFit: 'contain',
             display: 'block',
@@ -122,15 +122,15 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => handleTabClick(tab.id)}
                 style={{
                   position: 'relative',
-                  padding: '7px 16px',
+                  padding: '5px 13px',
                   borderRadius: 9999,
-                  fontSize: 13.5,
+                  fontSize: 12.5,
                   fontWeight: isActive ? 600 : 500,
                   color: isActive ? 'var(--pill-active-text)' : 'var(--text-secondary)',
                   background: 'transparent',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: 6,
+                  gap: 5,
                   transition: 'color 0.2s ease',
                   zIndex: 2,
                 }}
@@ -153,9 +153,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                 {tab.badge !== undefined && (
                   <span
                     style={{
-                      fontSize: 11,
+                      fontSize: 10.5,
                       fontWeight: 700,
-                      padding: '1px 6px',
+                      padding: '1px 5px',
                       borderRadius: 9999,
                       background: isActive ? 'rgba(255,255,255,0.22)' : 'rgba(0,0,0,0.06)',
                       color: isActive ? 'var(--pill-active-text)' : 'var(--text-secondary)',
@@ -173,7 +173,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Right Controls matching Video Frame 1 & 7: Audio Toggle + Bell + MR Avatar */}
-      <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+      <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
         {/* Audio SFX Toggle */}
         <motion.button
           whileHover={{ scale: 1.08 }}
@@ -181,8 +181,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           onClick={toggleSound}
           className="glass-pill"
           style={{
-            width: 38,
-            height: 38,
+            width: 34,
+            height: 34,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           }}
           title={soundEnabled ? 'Sound FX Enabled (Click to Mute)' : 'Sound FX Muted (Click to Unmute)'}
         >
-          {soundEnabled ? <Volume2 size={16} /> : <VolumeX size={16} />}
+          {soundEnabled ? <Volume2 size={15} /> : <VolumeX size={15} />}
         </motion.button>
 
         {/* Notifications */}
@@ -204,8 +204,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           }}
           className="glass-pill"
           style={{
-            width: 38,
-            height: 38,
+            width: 34,
+            height: 34,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -214,14 +214,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           }}
           title="Notifications"
         >
-          <Bell size={16} />
+          <Bell size={15} />
           <span
             style={{
               position: 'absolute',
-              top: 8,
-              right: 8,
-              width: 6,
-              height: 6,
+              top: 7,
+              right: 7,
+              width: 5,
+              height: 5,
               borderRadius: '50%',
               background: '#ef4444',
             }}
@@ -233,15 +233,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.94 }}
           style={{
-            width: 38,
-            height: 38,
+            width: 34,
+            height: 34,
             borderRadius: '50%',
             background: 'var(--bg-surface-subtle)',
             border: '1px solid var(--border-light)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: 13,
+            fontSize: 12,
             fontWeight: 700,
             color: 'var(--text-primary)',
             fontFamily: 'var(--font-mono)',

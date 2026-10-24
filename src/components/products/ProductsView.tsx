@@ -38,12 +38,12 @@ export const ProductsView: React.FC = () => {
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       className="page-container"
     >
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14, marginBottom: 24 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
         <div>
-          <h1 style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+          <h1 style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
             Software Products & Modules
           </h1>
-          <p style={{ fontSize: 13.5, color: 'var(--text-secondary)', marginTop: 4 }}>
+          <p style={{ fontSize: 12.5, color: 'var(--text-secondary)', marginTop: 3 }}>
             Tadbeer Transformation Trading Software Ecosystem • 6 active enterprise platforms
           </p>
         </div>
@@ -54,9 +54,9 @@ export const ProductsView: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             gap: 6,
-            padding: '8px 18px',
+            padding: '6px 14px',
             borderRadius: 9999,
-            fontSize: 13.5,
+            fontSize: 12.5,
             fontWeight: 600,
             background: 'var(--pill-active-bg)',
             color: 'var(--pill-active-text)',

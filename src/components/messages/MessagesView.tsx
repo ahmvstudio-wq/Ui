@@ -94,11 +94,11 @@ export const MessagesView: React.FC = () => {
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       className="page-container"
     >
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+      <div style={{ marginBottom: 16 }}>
+        <h1 style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
           Messages & Communications
         </h1>
-        <p style={{ fontSize: 13.5, color: 'var(--text-secondary)', marginTop: 4 }}>
+        <p style={{ fontSize: 12.5, color: 'var(--text-secondary)', marginTop: 3 }}>
           Tadbeer Engineering & Architecture Team Correspondence
         </p>
       </div>

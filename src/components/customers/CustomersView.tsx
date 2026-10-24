@@ -40,24 +40,24 @@ export const CustomersView: React.FC = () => {
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       className="page-container"
     >
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14, marginBottom: 24 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
         <div>
-          <h1 style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+          <h1 style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
             Enterprise Clients & Trading Accounts
           </h1>
-          <p style={{ fontSize: 13.5, color: 'var(--text-secondary)', marginTop: 4 }}>
+          <p style={{ fontSize: 12.5, color: 'var(--text-secondary)', marginTop: 3 }}>
             Tadbeer Transformation client relationship management, SLA tracking, and ACV metrics
           </p>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'var(--bg-surface)', padding: '7px 16px', borderRadius: 9999, border: '1px solid var(--border-light)', width: 290 }}>
-          <Search size={15} style={{ color: 'var(--text-muted)' }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, background: 'var(--bg-surface)', padding: '5px 14px', borderRadius: 9999, border: '1px solid var(--border-light)', width: 260 }}>
+          <Search size={14} style={{ color: 'var(--text-muted)' }} />
           <input
             type="text"
             placeholder="Search enterprise client or company..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            style={{ border: 'none', background: 'transparent', outline: 'none', fontSize: 13, color: 'var(--text-primary)', width: '100%', fontFamily: 'inherit' }}
+            style={{ border: 'none', background: 'transparent', outline: 'none', fontSize: 12.5, color: 'var(--text-primary)', width: '100%', fontFamily: 'inherit' }}
           />
         </div>
       </div>

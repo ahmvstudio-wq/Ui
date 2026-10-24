@@ -67,12 +67,12 @@ export const AutomationsView: React.FC = () => {
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       className="page-container"
     >
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14, marginBottom: 24 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
         <div>
-          <h1 style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+          <h1 style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
             Automations & AI Workflows
           </h1>
-          <p style={{ fontSize: 13.5, color: 'var(--text-secondary)', marginTop: 4 }}>
+          <p style={{ fontSize: 12.5, color: 'var(--text-secondary)', marginTop: 3 }}>
             Tadbeer Transformation Trading automated CI/CD, SLA failovers, and intelligent routing
           </p>
         </div>
@@ -80,9 +80,9 @@ export const AutomationsView: React.FC = () => {
         <button
           onClick={() => sound.playSuccess()}
           className="glass-pill"
-          style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '8px 18px', fontSize: 13.5, fontWeight: 600, color: 'var(--text-primary)' }}
+          style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '6px 14px', fontSize: 12.5, fontWeight: 600, color: 'var(--text-primary)' }}
         >
-          <Sparkles size={15} />
+          <Sparkles size={14} />
           <span>New Recipe</span>
         </button>
       </div>
