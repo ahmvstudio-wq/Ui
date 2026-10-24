@@ -22,14 +22,14 @@ interface OrderItem {
 }
 
 const ORDERS_DATA: OrderItem[] = [
-  { id: '#TDB-9420', customer: 'Eng. Salim Al Harthy', company: 'Oman Air (الطيران العماني)', channel: 'Cloud SaaS', items: 'Tadbeer ERP Core + AI Engine (500 Seats)', amount: 48500.0, status: 'Active', date: 'Oct 24, 2026' },
-  { id: '#TDB-9419', customer: 'Sheikh Nasser Al Harrasi', company: 'Al Harrasi Rope Factory', channel: 'On-Prem Trading', items: 'Industrial ERP & Manufacturing Telemetry', amount: 32000.0, status: 'Active', date: 'Oct 24, 2026' },
-  { id: '#TDB-9418', customer: 'Dr. Maryam Al Balushi', company: 'Oman Vision 2040 Unit', channel: 'Cloud SaaS', items: 'National AI Workflow Agent & Dashboard', amount: 28500.0, status: 'Deploying', date: 'Oct 23, 2026' },
-  { id: '#TDB-9417', customer: 'Tariq Al Zadjali', company: 'Sultanate of Marble', channel: 'Hybrid Cluster', items: 'Multi-Branch Inventory & Oman VAT Engine', amount: 19850.0, status: 'Active', date: 'Oct 23, 2026' },
-  { id: '#TDB-9416', customer: 'Fatima Al Lawati', company: "Gloria Jean's Coffees Oman", channel: 'Cloud SaaS', items: 'Omnichannel POS & Centralized Stock Hub', amount: 16200.0, status: 'Active', date: 'Oct 22, 2026' },
-  { id: '#TDB-9415', customer: 'Ahmed Al Musharfi', company: 'AMEC Al Musharfi Engineering', channel: 'On-Prem Trading', items: 'EPC Project ERP & Billing Automation', amount: 24000.0, status: 'Deploying', date: 'Oct 22, 2026' },
-  { id: '#TDB-9414', customer: 'Hamad Al Maqbali', company: 'Mafran Meat & Livestock', channel: 'Cloud SaaS', items: 'Cold-Chain ERP & Oman WPS Payroll', amount: 14450.0, status: 'Provisioned', date: 'Oct 21, 2026' },
-  { id: '#TDB-9413', customer: 'Khalfan Al Rawahi', company: 'Atiin Omani Heritage', channel: 'Cloud SaaS', items: 'Omnichannel E-Commerce Engine & CRM', amount: 11850.0, status: 'Active', date: 'Oct 20, 2026' },
+  { id: '#TDB-9420', customer: 'Emma Watson', company: 'Global Asset Management', channel: 'Cloud SaaS', items: 'Tadbeer ERP Core + AI Engine (50 Seats)', amount: 48500.0, status: 'Active', date: 'Oct 24, 2026' },
+  { id: '#TDB-9419', customer: 'David Miller', company: 'Gulf Trading Corp', channel: 'On-Prem Trading', items: 'Low-Latency Core Engine v4 (Node 1-4)', amount: 32000.0, status: 'Active', date: 'Oct 24, 2026' },
+  { id: '#TDB-9418', customer: 'Sophie Chen', company: 'Apex Financial Tech', channel: 'Cloud SaaS', items: 'Omnichannel Trading Gateway & API', amount: 28500.0, status: 'Deploying', date: 'Oct 23, 2026' },
+  { id: '#TDB-9417', customer: 'Marcus Aurel', company: 'Capital Partners Global', channel: 'Hybrid Cluster', items: 'Client Portal Pro + Data Pipeline', amount: 19850.0, status: 'Active', date: 'Oct 23, 2026' },
+  { id: '#TDB-9416', customer: 'Chloe Bennett', company: 'Bennett Logistics & Trade', channel: 'Cloud SaaS', items: 'Enterprise ERP Core Module (30 Seats)', amount: 16200.0, status: 'Active', date: 'Oct 22, 2026' },
+  { id: '#TDB-9415', customer: 'Lucas Vance', company: 'Quantum Capital Global', channel: 'On-Prem Trading', items: 'High-Frequency Core Engine (Cluster B)', amount: 24000.0, status: 'Deploying', date: 'Oct 22, 2026' },
+  { id: '#TDB-9414', customer: 'Aria Thorne', company: 'Emirates Financial Group', channel: 'Cloud SaaS', items: 'AI Transformation Agent (Full Stack)', amount: 14450.0, status: 'Provisioned', date: 'Oct 21, 2026' },
+  { id: '#TDB-9413', customer: 'Ethan Brooks', company: 'Brooks Trading Partners', channel: 'Cloud SaaS', items: 'Trading API Connector & Analytics Suite', amount: 11850.0, status: 'Active', date: 'Oct 20, 2026' },
 ];
 
 export const OrdersView: React.FC = () => {
