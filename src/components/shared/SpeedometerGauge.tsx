@@ -24,11 +24,11 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
   }, [score]);
 
   // Semicircle parameters
-  const size = 220;
-  const strokeWidth = 11;
+  const size = 260;
+  const strokeWidth = 13;
   const radius = (size - strokeWidth * 2) / 2;
   const cx = size / 2;
-  const cy = size / 2 + 6;
+  const cy = size / 2 + 10;
 
   // Perimeter of semicircle = Math.PI * radius
   const arcLength = Math.PI * radius;
@@ -46,7 +46,7 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
       style={{
         background: 'var(--bg-dark-card)',
         borderRadius: 20,
-        padding: '18px 20px',
+        padding: '24px 26px',
         color: '#ffffff',
         border: '1px solid rgba(255, 255, 255, 0.08)',
         position: 'relative',
@@ -54,7 +54,7 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
         flexDirection: 'column',
         justifyContent: 'space-between',
         boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)',
-        minHeight: '330px',
+        minHeight: '410px',
         overflow: 'hidden',
       }}
     >
@@ -170,13 +170,13 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
             <circle
               cx={knobX}
               cy={knobY}
-              r={9.5}
+              r={11.5}
               fill="#111113"
               stroke="#ffffff"
               strokeWidth={2.5}
               filter="url(#knobGlow)"
             />
-            <circle cx={knobX} cy={knobY} r={3.5} fill="#ffffff" />
+            <circle cx={knobX} cy={knobY} r={4} fill="#ffffff" />
           </motion.g>
         </svg>
 
@@ -190,8 +190,8 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
             textAlign: 'center',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
-            <span style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+            <span style={{ fontSize: 42, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1 }}>
               <AnimatedNumber value={currentScore} duration={1200} />
             </span>
             <span
@@ -199,29 +199,29 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 2,
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: 600,
                 color: '#34d399',
                 background: 'rgba(52, 211, 153, 0.15)',
-                padding: '2px 6px',
+                padding: '2px 7px',
                 borderRadius: 10,
               }}
             >
               ↑ {delta}
             </span>
           </div>
-          <div style={{ fontSize: 11.5, color: '#9ca3af', marginTop: 3, fontWeight: 500 }}>
+          <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4, fontWeight: 500 }}>
             of 100 points
           </div>
         </div>
       </div>
 
       {/* Bottom Insights */}
-      <div style={{ marginTop: 10, zIndex: 2 }}>
-        <div style={{ fontSize: 14, fontWeight: 600, color: '#ffffff', marginBottom: 3 }}>
+      <div style={{ marginTop: 14, zIndex: 2 }}>
+        <div style={{ fontSize: 14.5, fontWeight: 600, color: '#ffffff', marginBottom: 4 }}>
           Ahead of plan
         </div>
-        <p style={{ fontSize: 12, color: '#9ca3af', lineHeight: 1.4, marginBottom: 8 }}>
+        <p style={{ fontSize: 12.5, color: '#9ca3af', lineHeight: 1.45, marginBottom: 10 }}>
           Both SaaS and Trading engine tiers beat SLA targets. Cloud SaaS did most of the lifting.
         </p>
         <button
@@ -229,7 +229,7 @@ export const SpeedometerGauge: React.FC<SpeedometerGaugeProps> = ({
             display: 'inline-flex',
             alignItems: 'center',
             gap: 3,
-            fontSize: 12,
+            fontSize: 12.5,
             color: '#e5e7eb',
             fontWeight: 500,
             textDecoration: 'underline',

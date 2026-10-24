@@ -101,12 +101,12 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          marginBottom: 14,
+          marginBottom: 18,
         }}
       >
         <h1
           style={{
-            fontSize: 25,
+            fontSize: 28,
             fontWeight: 800,
             letterSpacing: '-0.03em',
             color: 'var(--text-primary)',
@@ -127,9 +127,9 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: 7,
-            padding: '5px 13px',
-            fontSize: 12,
+            gap: 8,
+            padding: '6px 15px',
+            fontSize: 12.5,
             fontWeight: 600,
             color: 'var(--text-primary)',
             cursor: 'pointer',
@@ -149,8 +149,8 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: 12,
-          marginBottom: 16,
+          gap: 14,
+          marginBottom: 22,
         }}
       >
         {/* Left Filter Pill Capsules */}
@@ -321,18 +321,18 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           transition={{ duration: 0.18 }}
           className="dark-hero-card"
           style={{
-            padding: '14px 16px',
+            padding: '18px 20px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '135px',
+            minHeight: '155px',
           }}
         >
           <div>
-            <div style={{ fontSize: 12, color: '#9ca3af', fontWeight: 500, marginBottom: 5 }}>
+            <div style={{ fontSize: 12.5, color: '#9ca3af', fontWeight: 500, marginBottom: 6 }}>
               Revenue
             </div>
-            <div style={{ fontSize: 23, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.15 }}>
+            <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.15 }}>
               <AnimatedNumber value={37162} prefix="$" duration={900} />
             </div>
             <div
@@ -340,20 +340,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 3,
-                fontSize: 10.5,
+                fontSize: 11,
                 fontWeight: 600,
                 color: '#34d399',
                 background: 'rgba(52, 211, 153, 0.15)',
-                padding: '1px 6px',
+                padding: '2px 7px',
                 borderRadius: 9999,
-                marginTop: 5,
+                marginTop: 6,
               }}
             >
               ↑ 8.1% vs previous
             </div>
           </div>
-          <div style={{ marginTop: 8 }}>
-            <Sparkline data={sparkData.revenue} strokeColor="#ffffff" height={22} />
+          <div style={{ marginTop: 10 }}>
+            <Sparkline data={sparkData.revenue} strokeColor="#ffffff" height={26} />
           </div>
         </motion.div>
 
@@ -363,20 +363,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           transition={{ duration: 0.18 }}
           className="glass-card"
           style={{
-            padding: '14px 16px',
+            padding: '18px 20px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '135px',
+            minHeight: '155px',
           }}
         >
           <div>
-            <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 5 }}>
+            <div style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 6 }}>
               Orders
             </div>
             <div
               style={{
-                fontSize: 23,
+                fontSize: 26,
                 fontWeight: 800,
                 letterSpacing: '-0.03em',
                 lineHeight: 1.15,
@@ -390,20 +390,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 3,
-                fontSize: 10.5,
+                fontSize: 11,
                 fontWeight: 600,
                 color: 'var(--accent-green-text)',
                 background: 'var(--accent-green-bg)',
-                padding: '1px 6px',
+                padding: '2px 7px',
                 borderRadius: 9999,
-                marginTop: 5,
+                marginTop: 6,
               }}
             >
               ↑ 7.8% vs previous
             </div>
           </div>
-          <div style={{ marginTop: 8 }}>
-            <Sparkline data={sparkData.orders} strokeColor="var(--text-primary)" height={22} />
+          <div style={{ marginTop: 10 }}>
+            <Sparkline data={sparkData.orders} strokeColor="var(--text-primary)" height={26} />
           </div>
         </motion.div>
 
@@ -413,20 +413,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           transition={{ duration: 0.18 }}
           className="glass-card"
           style={{
-            padding: '14px 16px',
+            padding: '18px 20px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '135px',
+            minHeight: '155px',
           }}
         >
           <div>
-            <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 5 }}>
+            <div style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 6 }}>
               Average order value
             </div>
             <div
               style={{
-                fontSize: 23,
+                fontSize: 26,
                 fontWeight: 800,
                 letterSpacing: '-0.03em',
                 lineHeight: 1.15,
@@ -440,20 +440,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 3,
-                fontSize: 10.5,
+                fontSize: 11,
                 fontWeight: 600,
                 color: 'var(--accent-green-text)',
                 background: 'var(--accent-green-bg)',
-                padding: '1px 6px',
+                padding: '2px 7px',
                 borderRadius: 9999,
-                marginTop: 5,
+                marginTop: 6,
               }}
             >
               ↑ 0.3% vs previous
             </div>
           </div>
-          <div style={{ marginTop: 8 }}>
-            <Sparkline data={sparkData.aov} strokeColor="var(--text-primary)" height={22} />
+          <div style={{ marginTop: 10 }}>
+            <Sparkline data={sparkData.aov} strokeColor="var(--text-primary)" height={26} />
           </div>
         </motion.div>
 
@@ -463,20 +463,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           transition={{ duration: 0.18 }}
           className="glass-card"
           style={{
-            padding: '14px 16px',
+            padding: '18px 20px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '135px',
+            minHeight: '155px',
           }}
         >
           <div>
-            <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 5 }}>
+            <div style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 6 }}>
               Conversion
             </div>
             <div
               style={{
-                fontSize: 23,
+                fontSize: 26,
                 fontWeight: 800,
                 letterSpacing: '-0.03em',
                 lineHeight: 1.15,
@@ -490,20 +490,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 3,
-                fontSize: 10.5,
+                fontSize: 11,
                 fontWeight: 600,
                 color: 'var(--accent-green-text)',
                 background: 'var(--accent-green-bg)',
-                padding: '1px 6px',
+                padding: '2px 7px',
                 borderRadius: 9999,
-                marginTop: 5,
+                marginTop: 6,
               }}
             >
               ↑ +0.0 pt vs previous
             </div>
           </div>
-          <div style={{ marginTop: 8 }}>
-            <Sparkline data={sparkData.conversion} strokeColor="var(--text-primary)" height={22} />
+          <div style={{ marginTop: 10 }}>
+            <Sparkline data={sparkData.conversion} strokeColor="var(--text-primary)" height={26} />
           </div>
         </motion.div>
 
@@ -513,20 +513,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           transition={{ duration: 0.18 }}
           className="glass-card"
           style={{
-            padding: '14px 16px',
+            padding: '18px 20px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '135px',
+            minHeight: '155px',
           }}
         >
           <div>
-            <div style={{ fontSize: 12, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 5 }}>
+            <div style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500, marginBottom: 6 }}>
               Returning customers
             </div>
             <div
               style={{
-                fontSize: 23,
+                fontSize: 26,
                 fontWeight: 800,
                 letterSpacing: '-0.03em',
                 lineHeight: 1.15,
@@ -540,20 +540,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 3,
-                fontSize: 10.5,
+                fontSize: 11,
                 fontWeight: 600,
                 color: 'var(--accent-green-text)',
                 background: 'var(--accent-green-bg)',
-                padding: '1px 6px',
+                padding: '2px 7px',
                 borderRadius: 9999,
-                marginTop: 5,
+                marginTop: 6,
               }}
             >
               ↑ +0.3 pt vs previous
             </div>
           </div>
-          <div style={{ marginTop: 8 }}>
-            <Sparkline data={sparkData.retention} strokeColor="var(--text-primary)" height={22} />
+          <div style={{ marginTop: 10 }}>
+            <Sparkline data={sparkData.retention} strokeColor="var(--text-primary)" height={26} />
           </div>
         </motion.div>
       </div>
@@ -564,12 +564,12 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
         <div
           className="glass-card"
           style={{
-            padding: '18px 20px',
+            padding: '24px 26px',
             position: 'relative',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '340px',
+            minHeight: '410px',
           }}
         >
           {/* Chart Header Line */}
@@ -623,13 +623,13 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
           </div>
 
           {/* SVG Line Chart Canvas */}
-          <div style={{ position: 'relative', width: '100%', height: 195, marginTop: 6 }}>
+          <div style={{ position: 'relative', width: '100%', height: 250, marginTop: 6 }}>
             {/* Horizontal guide lines ($2k, $1.5k, $1k, $500) */}
             {[
-              { val: '$2k', y: 15 },
-              { val: '$1.5k', y: 65 },
-              { val: '$1k', y: 115 },
-              { val: '$500', y: 165 },
+              { val: '$2k', y: 20 },
+              { val: '$1.5k', y: 80 },
+              { val: '$1k', y: 140 },
+              { val: '$500', y: 200 },
             ].map((g, idx) => (
               <div
                 key={idx}
@@ -810,11 +810,11 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
         <div
           className="glass-card"
           style={{
-            padding: '18px 20px',
+            padding: '24px 22px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '340px',
+            minHeight: '410px',
           }}
         >
           <div>

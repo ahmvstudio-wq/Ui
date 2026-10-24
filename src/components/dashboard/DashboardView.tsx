@@ -84,12 +84,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          marginBottom: 14,
+          marginBottom: 18,
         }}
       >
         <h1
           style={{
-            fontSize: 25,
+            fontSize: 28,
             fontWeight: 800,
             letterSpacing: '-0.03em',
             color: 'var(--text-primary)',
@@ -107,9 +107,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: 7,
-            padding: '5px 13px',
-            fontSize: 12,
+            gap: 8,
+            padding: '6px 15px',
+            fontSize: 12.5,
             fontWeight: 600,
             color: 'var(--text-primary)',
             cursor: 'pointer',
@@ -129,8 +129,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: 12,
-          marginBottom: 16,
+          gap: 14,
+          marginBottom: 22,
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
@@ -158,9 +158,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   onClick={() => handleChannelChange(btn.id as ChannelFilter)}
                   style={{
                     position: 'relative',
-                    padding: '5px 13px',
+                    padding: '6px 15px',
                     borderRadius: 9999,
-                    fontSize: 12.5,
+                    fontSize: 13,
                     fontWeight: isActive ? 600 : 500,
                     color: isActive ? 'var(--pill-active-text)' : 'var(--text-secondary)',
                     background: 'transparent',
@@ -196,8 +196,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               display: 'flex',
               alignItems: 'center',
               gap: 7,
-              padding: '5px 13px',
-              fontSize: 12,
+              padding: '6px 15px',
+              fontSize: 12.5,
               fontWeight: 500,
               color: 'var(--text-secondary)',
               cursor: 'pointer',
@@ -266,9 +266,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
-          gap: 14,
-          marginBottom: 18,
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gap: 16,
+          marginBottom: 24,
         }}
       >
         {/* Card 1: Active sales (Dark Card) */}
@@ -277,24 +277,24 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           transition={{ duration: 0.2 }}
           className="dark-hero-card"
           style={{
-            padding: '16px 18px',
+            padding: '20px 22px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '142px',
+            minHeight: '172px',
           }}
         >
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                <span style={{ fontSize: 12.5, color: '#d1d5db', fontWeight: 500 }}>Active ARR / Sales</span>
-                <Info size={12} style={{ color: '#9ca3af', opacity: 0.7 }} />
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <span style={{ fontSize: 13, color: '#d1d5db', fontWeight: 500 }}>Active ARR / Sales</span>
+                <Info size={13} style={{ color: '#9ca3af', opacity: 0.7 }} />
               </div>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1 }}>
+                <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1 }}>
                   <AnimatedNumber value={metricValues.sales} prefix="$" duration={900} />
                 </div>
                 <div
@@ -302,13 +302,13 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 3,
-                    fontSize: 11,
+                    fontSize: 11.5,
                     fontWeight: 600,
                     color: '#34d399',
                     background: 'rgba(52, 211, 153, 0.14)',
-                    padding: '1px 6px',
+                    padding: '2px 8px',
                     borderRadius: 9999,
-                    marginTop: 6,
+                    marginTop: 8,
                   }}
                 >
                   {metricValues.salesGrowth}
@@ -316,11 +316,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               </div>
 
               {/* 3 Glowing Activity Bars */}
-              <div style={{ display: 'flex', alignItems: 'flex-end', gap: 3, height: 26, paddingBottom: 2 }}>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: 3.5, height: 30, paddingBottom: 2 }}>
                 <div
                   style={{
                     width: 5,
-                    height: 16,
+                    height: 18,
                     borderRadius: 3,
                     background: '#6b7280',
                     animation: 'pulse 1.8s infinite ease-in-out',
@@ -329,7 +329,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <div
                   style={{
                     width: 5,
-                    height: 24,
+                    height: 28,
                     borderRadius: 3,
                     background: '#e5e7eb',
                     animation: 'pulse 1.8s infinite ease-in-out 0.2s',
@@ -338,7 +338,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <div
                   style={{
                     width: 5,
-                    height: 19,
+                    height: 22,
                     borderRadius: 3,
                     background: '#ffffff',
                     animation: 'pulse 1.8s infinite ease-in-out 0.4s',
@@ -348,14 +348,14 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
 
-          <div style={{ paddingTop: 10, borderTop: '1px dashed rgba(255, 255, 255, 0.12)', marginTop: 10 }}>
+          <div style={{ paddingTop: 12, borderTop: '1px dashed rgba(255, 255, 255, 0.12)', marginTop: 12 }}>
             <button
               onClick={() => {
                 sound.playNav();
                 onOpenOrdersModal();
               }}
               style={{
-                fontSize: 12,
+                fontSize: 12.5,
                 fontWeight: 500,
                 color: '#e5e7eb',
                 textDecoration: 'underline',
@@ -374,24 +374,24 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           transition={{ duration: 0.2 }}
           className="glass-card"
           style={{
-            padding: '16px 18px',
+            padding: '20px 22px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '142px',
+            minHeight: '172px',
           }}
         >
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 8 }}>
-              <span style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500 }}>Revenue</span>
-              <Info size={12} style={{ color: 'var(--text-muted)' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+              <span style={{ fontSize: 13, color: 'var(--text-secondary)', fontWeight: 500 }}>Revenue</span>
+              <Info size={13} style={{ color: 'var(--text-muted)' }} />
             </div>
 
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
               <div>
                 <div
                   style={{
-                    fontSize: 25,
+                    fontSize: 28,
                     fontWeight: 800,
                     letterSpacing: '-0.03em',
                     lineHeight: 1.1,
@@ -405,13 +405,13 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 3,
-                    fontSize: 11,
+                    fontSize: 11.5,
                     fontWeight: 600,
                     color: 'var(--accent-green-text)',
                     background: 'var(--accent-green-bg)',
-                    padding: '1px 6px',
+                    padding: '2px 8px',
                     borderRadius: 9999,
-                    marginTop: 6,
+                    marginTop: 8,
                   }}
                 >
                   {metricValues.revenueGrowth}
@@ -422,22 +422,22 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <div style={{ paddingBottom: 2 }}>
                 <Sparkline
                   data={[22, 28, 25, 34, 30, 42, 38, 48]}
-                  width={68}
-                  height={24}
+                  width={76}
+                  height={28}
                   strokeColor="var(--text-primary)"
                 />
               </div>
             </div>
           </div>
 
-          <div style={{ paddingTop: 10, borderTop: '1px dashed var(--border-light)', marginTop: 10 }}>
+          <div style={{ paddingTop: 12, borderTop: '1px dashed var(--border-light)', marginTop: 12 }}>
             <button
               onClick={() => {
                 sound.playTab();
                 onNavigateToAnalytics();
               }}
               style={{
-                fontSize: 12,
+                fontSize: 12.5,
                 fontWeight: 500,
                 color: 'var(--text-secondary)',
                 textDecoration: 'underline',
@@ -455,24 +455,24 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           transition={{ duration: 0.2 }}
           className="glass-card-subtle"
           style={{
-            padding: '16px 18px',
+            padding: '20px 22px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '142px',
+            minHeight: '172px',
           }}
         >
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 8 }}>
-              <span style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500 }}>Active licenses</span>
-              <Info size={12} style={{ color: 'var(--text-muted)' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+              <span style={{ fontSize: 13, color: 'var(--text-secondary)', fontWeight: 500 }}>Active licenses</span>
+              <Info size={13} style={{ color: 'var(--text-muted)' }} />
             </div>
 
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
               <div>
                 <div
                   style={{
-                    fontSize: 25,
+                    fontSize: 28,
                     fontWeight: 800,
                     letterSpacing: '-0.03em',
                     lineHeight: 1.1,
@@ -486,13 +486,13 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 3,
-                    fontSize: 11,
+                    fontSize: 11.5,
                     fontWeight: 600,
                     color: 'var(--accent-green-text)',
                     background: 'var(--accent-green-bg)',
-                    padding: '1px 6px',
+                    padding: '2px 8px',
                     borderRadius: 9999,
-                    marginTop: 6,
+                    marginTop: 8,
                   }}
                 >
                   ↑ 6.4% vs last month
@@ -503,8 +503,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <div style={{ paddingBottom: 2 }}>
                 <CircularProgress
                   value={metricValues.unitsPercent}
-                  size={38}
-                  strokeWidth={3.5}
+                  size={42}
+                  strokeWidth={4}
                   color="var(--text-primary)"
                   bgColor="var(--border-medium)"
                 />
@@ -512,11 +512,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
 
-          <div style={{ paddingTop: 10, borderTop: '1px dashed var(--border-light)', marginTop: 10 }}>
+          <div style={{ paddingTop: 12, borderTop: '1px dashed var(--border-light)', marginTop: 12 }}>
             <button
               onClick={() => sound.playFilter()}
               style={{
-                fontSize: 12,
+                fontSize: 12.5,
                 fontWeight: 500,
                 color: 'var(--text-secondary)',
                 textDecoration: 'underline',
@@ -534,24 +534,24 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           transition={{ duration: 0.2 }}
           className="glass-card-subtle"
           style={{
-            padding: '16px 18px',
+            padding: '20px 22px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            minHeight: '142px',
+            minHeight: '172px',
           }}
         >
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 8 }}>
-              <span style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500 }}>Conversion rate</span>
-              <Info size={12} style={{ color: 'var(--text-muted)' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+              <span style={{ fontSize: 13, color: 'var(--text-secondary)', fontWeight: 500 }}>Conversion rate</span>
+              <Info size={13} style={{ color: 'var(--text-muted)' }} />
             </div>
 
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
               <div>
                 <div
                   style={{
-                    fontSize: 25,
+                    fontSize: 28,
                     fontWeight: 800,
                     letterSpacing: '-0.03em',
                     lineHeight: 1.1,
@@ -565,13 +565,13 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 3,
-                    fontSize: 11,
+                    fontSize: 11.5,
                     fontWeight: 600,
                     color: metricValues.conversionGrowth.includes('↓') ? 'var(--accent-red)' : 'var(--accent-green-text)',
                     background: metricValues.conversionGrowth.includes('↓') ? 'rgba(239, 68, 68, 0.12)' : 'var(--accent-green-bg)',
-                    padding: '1px 6px',
+                    padding: '2px 8px',
                     borderRadius: 9999,
-                    marginTop: 6,
+                    marginTop: 8,
                   }}
                 >
                   {metricValues.conversionGrowth}
@@ -579,14 +579,14 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               </div>
 
               {/* Multi-step Funnel Equalizer */}
-              <div style={{ display: 'flex', alignItems: 'flex-end', gap: 2.5, height: 24, paddingBottom: 2 }}>
-                {[10, 13, 16, 20, 18, 15, 19, 22].map((h, i) => (
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: 3, height: 28, paddingBottom: 2 }}>
+                {[12, 16, 20, 25, 22, 18, 23, 27].map((h, i) => (
                   <div
                     key={i}
                     style={{
-                      width: 3.5,
+                      width: 4,
                       height: h,
-                      borderRadius: 1.5,
+                      borderRadius: 2,
                       background: i >= 6 ? 'var(--text-primary)' : 'var(--border-medium)',
                     }}
                   />
@@ -595,11 +595,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
 
-          <div style={{ paddingTop: 10, borderTop: '1px dashed var(--border-light)', marginTop: 10 }}>
+          <div style={{ paddingTop: 12, borderTop: '1px dashed var(--border-light)', marginTop: 12 }}>
             <button
               onClick={() => sound.playFilter()}
               style={{
-                fontSize: 12,
+                fontSize: 12.5,
                 fontWeight: 500,
                 color: 'var(--text-secondary)',
                 textDecoration: 'underline',

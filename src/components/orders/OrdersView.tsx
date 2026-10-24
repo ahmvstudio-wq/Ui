@@ -57,12 +57,12 @@ export const OrdersView: React.FC = () => {
       className="page-container"
     >
       {/* Top Header */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 20 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
-          <h1 style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+          <h1 style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
             Software Contracts & Deployments
           </h1>
-          <span style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500 }}>
+          <span style={{ fontSize: 13, color: 'var(--text-secondary)', fontWeight: 500 }}>
             {filtered.length} active enterprise accounts • <AnimatedNumber value={totalRevenue} prefix="$" duration={600} decimals={2} /> annual contract value
           </span>
         </div>

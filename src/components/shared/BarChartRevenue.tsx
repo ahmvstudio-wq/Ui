@@ -32,7 +32,7 @@ export const BarChartRevenue: React.FC = () => {
   const [hoverIndex, setHoverIndex] = useState<number>(9);
 
   const maxVal = 60000;
-  const chartHeight = 160;
+  const chartHeight = 210;
 
   const handleYearChange = (year: '2025' | '2026') => {
     setSelectedYear(year);
@@ -43,12 +43,12 @@ export const BarChartRevenue: React.FC = () => {
     <div
       className="glass-card"
       style={{
-        padding: '18px 20px',
+        padding: '24px 28px',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        minHeight: '330px',
+        minHeight: '410px',
       }}
     >
       {/* Header */}
@@ -213,7 +213,7 @@ export const BarChartRevenue: React.FC = () => {
                   animate={{ height: `${h2025}px` }}
                   transition={{ type: 'spring', stiffness: 120, damping: 14, delay: idx * 0.025 }}
                   style={{
-                    width: 11,
+                    width: 12,
                     borderRadius: '6px 6px 2px 2px',
                     border: '1px solid var(--border-medium)',
                     background: selectedYear === '2025' ? 'rgba(0,0,0,0.06)' : 'rgba(0,0,0,0.02)',
@@ -227,7 +227,7 @@ export const BarChartRevenue: React.FC = () => {
                   animate={{ height: `${h2026}px` }}
                   transition={{ type: 'spring', stiffness: 120, damping: 14, delay: idx * 0.035 }}
                   style={{
-                    width: 12,
+                    width: 13,
                     borderRadius: '6px 6px 2px 2px',
                     background:
                       isHovered

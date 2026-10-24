@@ -193,10 +193,10 @@ export const KanbanView: React.FC<KanbanViewProps> = ({ onOpenAddCardModal }) =>
   return (
     <div className="page-container animate-view-in">
       {/* Top Header & Project Tabs */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 14 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 20 }}>
         <h1
           style={{
-            fontSize: 25,
+            fontSize: 28,
             fontWeight: 800,
             letterSpacing: '-0.03em',
             color: 'var(--text-primary)',

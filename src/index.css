@@ -333,8 +333,8 @@ button {
 
 /* Responsive Main Layout Container */
 .page-container {
-  padding: 4px 32px 48px 96px;
-  max-width: 1360px;
+  padding: 10px 40px 60px 108px;
+  max-width: 1480px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -345,22 +345,22 @@ button {
 .analytics-kpi-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 14px;
+  margin-bottom: 24px;
 }
 
 /* Analytics Bottom Grid */
 .analytics-bottom-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 20px;
 }
 
 /* Dashboard Bottom Grid */
 .dash-bottom-grid {
   display: grid;
-  grid-template-columns: minmax(300px, 36%) minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: minmax(320px, 36%) minmax(0, 1fr);
+  gap: 20px;
 }
 
 /* Messages Split Grid */

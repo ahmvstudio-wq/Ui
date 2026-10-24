@@ -40,12 +40,12 @@ export const CustomersView: React.FC = () => {
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       className="page-container"
     >
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 16 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 20 }}>
         <div>
-          <h1 style={{ fontSize: 25, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+          <h1 style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
             Enterprise Clients & Trading Accounts
           </h1>
-          <p style={{ fontSize: 12.5, color: 'var(--text-secondary)', marginTop: 3 }}>
+          <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginTop: 3 }}>
             Tadbeer Transformation client relationship management, SLA tracking, and ACV metrics
           </p>
         </div>
