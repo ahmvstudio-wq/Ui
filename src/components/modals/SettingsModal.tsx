@@ -9,7 +9,7 @@ interface SettingsModalProps {
 
 export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose }) => {
   const [storeName, setStoreName] = useState('Tadbeer Transformation Trading');
-  const [currency, setCurrency] = useState('USD ($)');
+  const [currency, setCurrency] = useState('OMR (ر.ع.)');
   const [soundEnabled, setSoundEnabled] = useState(sound.isEnabled());
 
   if (!isOpen) return null;
@@ -100,6 +100,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
                 outline: 'none',
               }}
             >
+              <option value="OMR (ر.ع.)">OMR (ر.ع.) - Omani Rial (Default)</option>
               <option value="USD ($)">USD ($) - United States Dollar</option>
               <option value="AED (د.إ)">AED (د.إ) - UAE Dirham</option>
               <option value="SAR (﷼)">SAR (﷼) - Saudi Riyal</option>

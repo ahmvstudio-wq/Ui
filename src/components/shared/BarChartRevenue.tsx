@@ -57,7 +57,7 @@ export const BarChartRevenue: React.FC = () => {
           <span style={{ fontSize: 14.5, fontWeight: 700, color: 'var(--text-primary)' }}>Enterprise Revenue</span>
           <Info size={13} style={{ color: 'var(--text-muted)', cursor: 'pointer' }} />
           <span style={{ fontSize: 12.5, color: 'var(--text-secondary)', fontWeight: 500 }}>
-            $300,000 ARR so far this year
+            OMR 300,000 ARR so far this year
           </span>
         </div>
 
@@ -115,11 +115,11 @@ export const BarChartRevenue: React.FC = () => {
       <div style={{ position: 'relative', width: '100%', height: chartHeight, marginTop: 10 }}>
         {/* Y Axis Gridlines */}
         {[
-          { label: '$60k', y: 0 },
-          { label: '$45k', y: 0.25 },
-          { label: '$30k', y: 0.5, isAvg: true },
-          { label: '$15k', y: 0.75 },
-          { label: '$0', y: 1 },
+          { label: '60k OMR', y: 0 },
+          { label: '45k OMR', y: 0.25 },
+          { label: '30k OMR', y: 0.5, isAvg: true },
+          { label: '15k OMR', y: 0.75 },
+          { label: '0 OMR', y: 1 },
         ].map((grid, idx) => (
           <div
             key={idx}
@@ -163,7 +163,7 @@ export const BarChartRevenue: React.FC = () => {
                   transform: 'translateY(-50%)',
                 }}
               >
-                avg $30k
+                avg 30k OMR
               </span>
             )}
           </div>
@@ -291,7 +291,7 @@ export const BarChartRevenue: React.FC = () => {
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11.5, marginBottom: 3 }}>
                 <span style={{ color: '#9ca3af' }}>Revenue</span>
                 <span style={{ fontWeight: 600, fontFamily: 'var(--font-mono)' }}>
-                  ${(selectedYear === '2026' ? hoveredMonth.val2026 : hoveredMonth.val2025).toLocaleString()}
+                  OMR {(selectedYear === '2026' ? hoveredMonth.val2026 : hoveredMonth.val2025).toLocaleString()}
                 </span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11.5, marginBottom: 3 }}>

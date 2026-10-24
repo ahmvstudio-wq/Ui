@@ -8,11 +8,11 @@ interface OrdersQuickModalProps {
 }
 
 const SAMPLE_ORDERS = [
-  { id: '#LIC-8941', customer: 'Emma Watson', channel: 'Cloud SaaS', items: 'Tadbeer Enterprise ERP Core v4.8 (x500 seats)', amount: '$48,000/yr', status: 'Active' },
-  { id: '#LIC-8940', customer: 'David Miller', channel: 'Enterprise On-Prem', items: 'Tadbeer Low-Latency Trading Engine v4.8', amount: '$32,000/yr', status: 'Provisioned' },
-  { id: '#LIC-8939', customer: 'Sophie Chen', channel: 'Cloud SaaS', items: 'AI Transformation Agent & Predictor Suite', amount: '$18,500/yr', status: 'Active' },
-  { id: '#LIC-8938', customer: 'Marcus Aurel', channel: 'Hybrid Cluster', items: 'Omnichannel Trading Gateway & API Bridge', amount: '$14,200/yr', status: 'Active' },
-  { id: '#LIC-8937', customer: 'Chloe Bennett', channel: 'Cloud SaaS', items: 'High-Frequency Order Routing Engine', amount: '$24,000/yr', status: 'Provisioned' },
+  { id: '#LIC-8941', customer: 'Oman Air (الطيران العماني)', channel: 'Cloud SaaS', items: 'Tadbeer Enterprise ERP Core v4.8 (x500 seats)', amount: 'OMR 48,000/yr', status: 'Active' },
+  { id: '#LIC-8940', customer: 'Al Harrasi Rope Factory', channel: 'Enterprise On-Prem', items: 'Tadbeer Supply Chain & Telemetry Engine', amount: 'OMR 32,000/yr', status: 'Provisioned' },
+  { id: '#LIC-8939', customer: 'Oman Vision 2040 Unit', channel: 'Cloud SaaS', items: 'Enterprise AI Agent & Workflow Orchestrator', amount: 'OMR 18,500/yr', status: 'Active' },
+  { id: '#LIC-8938', customer: 'Sultanate of Marble', channel: 'Hybrid Cluster', items: 'Multi-Branch Inventory & Oman VAT Engine', amount: 'OMR 14,200/yr', status: 'Active' },
+  { id: '#LIC-8937', customer: "Gloria Jean's Coffees Oman", channel: 'Cloud SaaS', items: 'Omnichannel POS & Centralized Stock Hub', amount: 'OMR 24,000/yr', status: 'Provisioned' },
 ];
 
 export const OrdersQuickModal: React.FC<OrdersQuickModalProps> = ({ isOpen, onClose }) => {

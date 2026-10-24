@@ -295,7 +295,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
               <div>
                 <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-                  <AnimatedNumber value={metricValues.sales} prefix="$" duration={900} />
+                  <AnimatedNumber value={metricValues.sales} prefix="OMR " duration={900} />
                 </div>
                 <div
                   style={{
@@ -398,7 +398,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     color: 'var(--text-primary)',
                   }}
                 >
-                  <AnimatedNumber value={metricValues.revenue} prefix="$" duration={900} />
+                  <AnimatedNumber value={metricValues.revenue} prefix="OMR " duration={900} />
                 </div>
                 <div
                   style={{

@@ -333,7 +333,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
               Revenue
             </div>
             <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.15 }}>
-              <AnimatedNumber value={37162} prefix="$" duration={900} />
+              <AnimatedNumber value={37162} prefix="OMR " duration={900} />
             </div>
             <div
               style={{
@@ -433,7 +433,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                 color: 'var(--text-primary)',
               }}
             >
-              <AnimatedNumber value={69.81} prefix="$" decimals={2} duration={900} />
+              <AnimatedNumber value={69.81} prefix="OMR " decimals={2} duration={900} />
             </div>
             <div
               style={{
@@ -587,7 +587,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                     color: 'var(--text-primary)',
                   }}
                 >
-                  <AnimatedNumber value={37162} prefix="$" duration={900} />
+                  <AnimatedNumber value={37162} prefix="OMR " duration={900} />
                 </span>
                 <span
                   style={{
@@ -624,12 +624,12 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
 
           {/* SVG Line Chart Canvas */}
           <div style={{ position: 'relative', width: '100%', height: 250, marginTop: 6 }}>
-            {/* Horizontal guide lines ($2k, $1.5k, $1k, $500) */}
+            {/* Horizontal guide lines (2k OMR, 1.5k OMR, 1k OMR, 500 OMR) */}
             {[
-              { val: '$2k', y: 20 },
-              { val: '$1.5k', y: 80 },
-              { val: '$1k', y: 140 },
-              { val: '$500', y: 200 },
+              { val: '2k OMR', y: 20 },
+              { val: '1.5k OMR', y: 80 },
+              { val: '1k OMR', y: 140 },
+              { val: '500 OMR', y: 200 },
             ].map((g, idx) => (
               <div
                 key={idx}
@@ -778,14 +778,14 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 3 }}>
                     <span style={{ color: 'var(--text-secondary)' }}>— This period</span>
                     <span style={{ fontWeight: 700, fontFamily: 'var(--font-mono)' }}>
-                      ${activePoint.thisVal.toLocaleString()}
+                      OMR {activePoint.thisVal.toLocaleString()}
                     </span>
                   </div>
                   {vsPrevious && (
                     <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 5 }}>
                       <span style={{ color: 'var(--text-muted)' }}>— {activePoint.prevDate}</span>
                       <span style={{ fontWeight: 600, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
-                        ${activePoint.prevVal.toLocaleString()}
+                        OMR {activePoint.prevVal.toLocaleString()}
                       </span>
                     </div>
                   )}
@@ -899,13 +899,13 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                       Cloud SaaS Platform
                     </div>
                     <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-                      382 subscriptions, $63.78k avg deal
+                      382 subscriptions, 63.78k OMR avg deal
                     </div>
                   </div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{ fontSize: 13.5, fontWeight: 700, fontFamily: 'var(--font-mono)' }}>
-                    $24,344
+                    OMR 24,344
                   </div>
                   <div style={{ fontSize: 10.5, fontWeight: 600, color: 'var(--accent-green-text)' }}>
                     ↑ 8.8%
@@ -942,13 +942,13 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ onOpenExportCsv })
                       Enterprise On-Prem Clusters
                     </div>
                     <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-                      150 client nodes, $85.35k avg deal
+                      150 client nodes, 85.35k OMR avg deal
                     </div>
                   </div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{ fontSize: 13.5, fontWeight: 700, fontFamily: 'var(--font-mono)' }}>
-                    $12,819
+                    OMR 12,819
                   </div>
                   <div style={{ fontSize: 10.5, fontWeight: 600, color: 'var(--accent-green-text)' }}>
                     ↑ 6.6%
