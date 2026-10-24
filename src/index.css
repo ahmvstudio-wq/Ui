@@ -1,0 +1,548 @@
+:root {
+  /* Light Mode Palette */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --bg-canvas: #f1f3f5;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #e8ecef;
+  --bg-surface-elevated: #ffffff;
+  --bg-dark-card: #111113;
+  --bg-dark-card-inner: #1a1c22;
+  
+  --text-primary: #111113;
+  --text-secondary: #5b6270;
+  --text-muted: #8b93a0;
+  --text-inverted: #ffffff;
+
+  --border-light: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --border-dark: rgba(255, 255, 255, 0.1);
+  --border-glass: rgba(255, 255, 255, 0.85);
+
+  --accent-green: #10b981;
+  --accent-green-bg: #e6f9f0;
+  --accent-green-text: #059669;
+  
+  --accent-orange: #f97316;
+  --accent-orange-bg: #fff1e6;
+  --accent-orange-text: #ea580c;
+
+  --accent-blue: #3b82f6;
+  --accent-red: #ef4444;
+
+  --dock-bg: #111113;
+  --dock-icon: #9ca3af;
+  --dock-icon-hover: #ffffff;
+  --dock-icon-active: #ffffff;
+
+  --pill-bg: rgba(255, 255, 255, 0.85);
+  --pill-active-bg: #111113;
+  --pill-active-text: #ffffff;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 12px 30px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  --shadow-dock: 0 18px 36px -8px rgba(0, 0, 0, 0.3), 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  --shadow-popover: 0 12px 32px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  --chart-bar-2025: #d1d5db;
+  --chart-bar-2026: #111113;
+  --chart-line: #111113;
+  --chart-line-prev: #9ca3af;
+}
+
+[data-theme='dark'] {
+  --bg-canvas: #0c0e12;
+  --bg-surface: #14171d;
+  --bg-surface-subtle: #1b1f27;
+  --bg-surface-elevated: #1e222c;
+  --bg-dark-card: #0a0b0e;
+  --bg-dark-card-inner: #15181f;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverted: #0f172a;
+
+  --border-light: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-glass: rgba(255, 255, 255, 0.08);
+
+  --accent-green: #34d399;
+  --accent-green-bg: rgba(52, 211, 153, 0.14);
+  --accent-green-text: #34d399;
+  
+  --accent-orange: #fb923c;
+  --accent-orange-bg: rgba(251, 146, 60, 0.16);
+  --accent-orange-text: #fb923c;
+
+  --dock-bg: #14171d;
+  --dock-icon: #64748b;
+  --dock-icon-hover: #f8fafc;
+  --dock-icon-active: #ffffff;
+
+  --pill-bg: rgba(20, 23, 29, 0.85);
+  --pill-active-bg: #ffffff;
+  --pill-active-text: #0c0e12;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 36px -4px rgba(0, 0, 0, 0.6);
+  --shadow-dock: 0 20px 45px -8px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --shadow-popover: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  --chart-bar-2025: #334155;
+  --chart-bar-2026: #f8fafc;
+  --chart-line: #f8fafc;
+  --chart-line-prev: #475569;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-x: hidden;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+/* Glassmorphism helpers */
+.glass-pill {
+  background: var(--pill-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-light);
+  border-radius: 9999px;
+}
+
+.glass-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-medium);
+}
+
+.glass-card-subtle {
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark-hero-card {
+  background: var(--bg-dark-card);
+  color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hatch pattern for 2025 comparison bars */
+.hatched-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(0, 0, 0, 0.12) 4px,
+    rgba(0, 0, 0, 0.12) 8px
+  );
+}
+
+[data-theme='dark'] .hatched-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(255, 255, 255, 0.12) 4px,
+    rgba(255, 255, 255, 0.12) 8px
+  );
+}
+
+/* Live indicator pulse animation */
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: live-pulse 2s infinite ease-in-out;
+}
+
+/* Floating dock styling */
+.dock-sidebar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 10px;
+  background: var(--dock-bg);
+  border-radius: 34px;
+  box-shadow: var(--shadow-dock);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dock-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dock-icon);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dock-btn:hover {
+  color: var(--dock-icon-hover);
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.08);
+}
+
+.dock-btn.active {
+  color: var(--dock-icon-active);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.dock-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ffffff;
+  color: #111113;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 4px;
+  border-radius: 9999px;
+  line-height: 1;
+}
+
+.dock-divider {
+  width: 20px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 2px 0;
+}
+
+/* Dock Tooltips */
+.dock-tooltip {
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111113;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dock-tooltip::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #111113 transparent transparent;
+}
+
+.dock-btn:hover .dock-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(2px);
+}
+
+/* Responsive Main Layout Container */
+.page-container {
+  padding: 8px 40px 84px 116px;
+  max-width: 1540px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Analytics KPI Grid Responsive Rules */
+.analytics-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+/* Analytics Bottom Grid */
+.analytics-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 20px;
+}
+
+/* Dashboard Bottom Grid */
+.dash-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 38%) minmax(0, 1fr);
+  gap: 20px;
+}
+
+/* Messages Split Grid */
+.messages-split-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  height: calc(100vh - 250px);
+  min-height: 620px;
+}
+
+/* Kanban Board Horizontal Scroll Container */
+.kanban-board-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(270px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1280px) {
+  .page-container {
+    padding: 14px 28px 72px 104px;
+  }
+  .analytics-kpi-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .analytics-bottom-grid {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 14px 20px 125px 20px !important;
+  }
+
+  /* Dock shifts to floating bottom bar on mobile/tablet */
+  .dock-sidebar {
+    position: fixed !important;
+    left: 50% !important;
+    top: auto !important;
+    bottom: 20px !important;
+    transform: translateX(-50%) !important;
+    flex-direction: row !important;
+    padding: 8px 16px !important;
+    border-radius: 9999px !important;
+    gap: 10px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45) !important;
+    z-index: 1000 !important;
+    background: var(--dock-bg) !important;
+  }
+
+  .dock-divider {
+    width: 1px !important;
+    height: 20px !important;
+    margin: 0 2px !important;
+  }
+
+  .dock-tooltip {
+    display: none !important;
+  }
+
+  /* Navbar styling on mobile */
+  header {
+    padding: 12px 20px !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .header-brand {
+    order: 1;
+  }
+
+  .header-actions {
+    order: 2;
+  }
+
+  /* Scrollable tabs container */
+  .mobile-scroll-tabs {
+    order: 3;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px !important;
+  }
+
+  .analytics-bottom-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dash-bottom-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kanban-board-grid {
+    grid-auto-flow: column !important;
+    grid-auto-columns: minmax(280px, 80vw) !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 10px 14px 115px 14px !important;
+  }
+
+  .analytics-kpi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .analytics-kpi-grid > :first-child {
+    grid-column: span 2 !important;
+  }
+
+  .messages-split-grid {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 8px 10px 110px 10px !important;
+  }
+
+  .dock-sidebar {
+    bottom: 14px !important;
+    padding: 6px 12px !important;
+    gap: 6px !important;
+  }
+
+  .dock-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .dock-badge {
+    top: 1px !important;
+    right: 1px !important;
+    font-size: 9px !important;
+  }
+
+  header {
+    padding: 10px 12px !important;
+  }
+}
+
+/* Clear vertical clearance between floating navbar and page content across all sections */
+header {
+  margin-bottom: 28px !important;
+}
+
+/* View Transition API Circular Wipe Animation (Ditto Video Frame 13 & 14) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none !important;
+  mix-blend-mode: normal !important;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 999999;
+}
+
+/* Full Logo Light/Dark visibility to keep brand text aligned & crisp */
+[data-theme="light"] .logo-dark-only {
+  display: none !important;
+}
+[data-theme="light"] .logo-light-only {
+  display: block !important;
+}
+[data-theme="dark"] .logo-light-only {
+  display: none !important;
+}
+[data-theme="dark"] .logo-dark-only {
+  display: block !important;
+}
+
